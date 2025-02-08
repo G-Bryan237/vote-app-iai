@@ -1,0 +1,60 @@
+name: my_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Firebase
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+
+  # Authentication
+  local_auth: ^2.2.0
+  pin_code_fields: ^8.0.1  # For OTP input
+
+  # UI Components
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10
+  cached_network_image: ^3.3.1
+
+  # State Management
+  provider: ^6.1.2
+
+  # Utils
+  intl: ^0.19.0
+  shared_preferences: ^2.2.2
+  logger: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment and add these when you have assets
+assets:
+    - assets/images/
+    - assets/icons/
+
+  # Uncomment and add these when you have custom fonts
+fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - asset: assets/fonts/Poppins-Bold.ttf
+        weight: 700
+  - family: Roboto
+    fonts:
+      - asset: assets/fonts/Roboto-Regular.ttf
+      - asset: assets/fonts/Roboto-Bold.ttf
+        weight: 700
