@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../services/auth_service.dart';
 import 'home_screen.dart';         // Add this
 import 'phone_auth_screen.dart';   // Add this
+import 'signup_screen.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -203,6 +204,23 @@ class _AuthScreenState extends State<AuthScreen> {
                     );
                   },
                   child: Text('Login with Phone Number'),
+
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Don\'t have an account?'),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignupScreen()),
+                        );
+                      },
+                      child: Text('Sign Up'),
+                    ),
+                  ],
                 ),
               ],
             ),

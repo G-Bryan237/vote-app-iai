@@ -1,15 +1,21 @@
-allprojects {
+buildscript {
     repositories {
-        google()
-        mavenCentral()
+        google() // <-- Make sure this line is present
+        mavenCentral() // <-- Make sure this line is present
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0' // (or latest version)
+        classpath 'com.google.gms:google-services:4.3.15' // <-- Make sure this line is present
     }
 }
 
-buildscript {
-    dependencies {
-        classpath 'com.google.gms:google-services:4.3.15'
+allprojects {
+    repositories {
+        google() // <-- Ensure this line is present
+        mavenCentral() // <-- Ensure this line is present
     }
 }
+
 
 rootProject.buildDir = "../build"
 subprojects {
